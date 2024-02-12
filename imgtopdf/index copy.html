@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Image to pdf Convertor</h1>
+        <div class="upload-img">
+            <input type="file" name=""  id="addImg" accept=".png, .jpg, jpeg">
+            Upload Image
+        </div>
+        <img src="Image/img.png" id="showImg" alt="" > <br><br><br>
+        <button >Image to PDF</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script>
+
+        var mainImage
+        $("#addImg").change(function(){
+            var imgPath = $(this).val()
+            console.log(imgPath)
+            var showImg = $("img").attr("src")
+            console.log(showImg)
+            mainImage = imgPath.change(showImg)
+            console.log(mainImage)
+        })
+        // $("button").click(function(){
+        //     // alert("test")
+        //     var imgPath = $(".upload-img").attr("src")
+        //     console.log(imgPath)
+        // })
+    </script>
+</body>
+
+</html>
